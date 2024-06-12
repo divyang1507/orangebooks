@@ -27,7 +27,7 @@ const HeroSection = () => {
                   alt="badge"
                 />
                 <div className="font-semibold text-center">
-                  80,000+ <br /> Copies Sold
+                  81,000+ <br /> Copies Sold
                 </div>
               </div>
               <button class="bg-orange-500 font-semibold text-white py-3 px-6 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
