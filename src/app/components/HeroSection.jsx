@@ -18,7 +18,7 @@ const HeroSection = () => {
               easily
             </p>
 
-            <div class="flex gap-4 justify-center">
+            <div class="sm:flex-col lg:flex gap-4 justify-center">
               <div className="flex gap-3 items-center border-2 border-orange-500 p-1 pr-6 rounded-lg ">
                 <Image
                   src="/BestSellerBadge.png"
