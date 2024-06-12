@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <>
       <section class="text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center w-[90%]">
+        <div class="container mx-auto flex px-5 py-5 pt-8 md:flex-row flex-col items-center w-[90%]">
           <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font sm:text-5xl text-3xl mb-4 font-medium text-gray-900">
               Nurturing Curious Minds,
@@ -18,23 +18,24 @@ const HeroSection = () => {
               easily
             </p>
 
-            <div class="flex lg:flex-row md:flex-col gap-4 items-center justify-center">
-            <div className="">
-            <button class="bg-orange-500 text-white py-3 px-6 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
-                Contact Us
-              </button>
-            </div>
-              <div className="flex gap-3 items-center border-2 border-orange-500 p-2 pr-6 rounded-lg ">
+            <div class="flex gap-4 justify-center">
+              <div className="flex gap-3 items-center border-2 border-orange-500 p-1 pr-6 rounded-lg ">
                 <Image
                   src="/BestSellerBadge.png"
-                  height={82}
-                  width={148}
+                  height={41}
+                  width={96}
                   alt="badge"
                 />
-              <div className="text-xl font-semibold text-center">
-              80,000+ <br/> Copies Sold 
+                <div className="font-semibold text-center">
+                  80,000+ <br /> Copies Sold
+                </div>
               </div>
-              </div>
+              <button class="bg-orange-500 font-semibold text-white py-3 px-6 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+                  Contact Us
+                </button>
+              {/* <div className="h-full">
+               
+              </div> */}
               {/* <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center lg:ml-4 md:ml-0 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
