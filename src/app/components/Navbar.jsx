@@ -25,14 +25,14 @@ const Navbar = () => {
           </span>
         </a>
         <nav className="md:ml-auto md:hidden hidden lg:flex lg:flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-600 hover:cursor-pointer">Home</a>
-          <a className="mr-5 hover:text-gray-600 hover:cursor-pointer">
+          <a className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer">Home</a>
+          <a className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer">
             Products
           </a>
-          <a className="mr-5 hover:text-gray-600 hover:cursor-pointer">
+          <a className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer">
             Contact
           </a>
-          <a className="mr-5 hover:text-gray-600 hover:cursor-pointer">About</a>
+          <a className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer">About</a>
         </nav>
         <div className="pr-4">
           <button

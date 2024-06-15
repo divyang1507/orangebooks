@@ -6,15 +6,40 @@ const Contact = () => {
       <section className="text-gray-600 body-font relative">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-            <iframe width="100%" height="100%" className="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"></iframe>
+            {/* <iframe
+              width="100%"
+              height="100%"
+              className="absolute inset-0"
+              frameBorder="0"
+              title="map"
+              marginheight="0"
+              marginwidth="0"
+              scrolling="no"
+              src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+            ></iframe> */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.5641255194387!2d72.17345987486118!3d24.257019169139415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395cbd1d40b572ab%3A0x5e4c79e69f3806a3!2sAroma%20City%20Center!5e0!3m2!1sen!2sin!4v1718417962423!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+               className="absolute inset-0"
+               style={{ border: 0 }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              frameBorder="0"
+              title="map"
+              marginheight="0"
+              marginwidth="0"
+              scrolling="no"
+            ></iframe>
             <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
               <div className="lg:w-1/2 px-6">
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                   ADDRESS
                 </h2>
                 <p className="mt-1">
-                Orange Book Publication 
-Shop No.19/1, Aroma City Center, 2 nd Floor, Deesa.
+                  Orange Book Publication Shop No.19/1, Aroma City Center, 2 nd
+                  Floor, Deesa.
                 </p>
               </div>
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
