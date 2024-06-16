@@ -7,7 +7,7 @@ export const bookdata = [
     rating: 4.5,
     review: 1526,
     price: 120,
-    image:['/Barkadi.jpg', ],
+    image:'/Barkadi.jpg',
     slug: "Gujarati-and-English-Letter-writing"
     
   },
