@@ -12,8 +12,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="text-black body-font relative w-[90%] mx-auto">
-      <div className="container mx-auto flex  mt-5 bg-orange-200 rounded-full flex-wrap p-5 items-center justify-between">
+    <header className="text-black body-font pt-5 w-[90%] mx-auto sticky top-0 z-50 bg-white">
+      <div className="container mx-auto flex  pt-5 bg-orange-200 rounded-full flex-wrap p-5 items-center justify-between">
         <Link
           href="/"
           className="flex title-font font-medium items-center text-black  hover:cursor-pointer"
