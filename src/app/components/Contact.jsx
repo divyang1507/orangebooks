@@ -12,8 +12,8 @@ const Contact = () => {
               className="absolute inset-0"
               frameBorder="0"
               title="map"
-              marginheight="0"
-              marginwidth="0"
+              marginHeight="0"
+              marginWidth="0"
               scrolling="no"
               src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             ></iframe> */}
@@ -21,15 +21,15 @@ const Contact = () => {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.5641255194387!2d72.17345987486118!3d24.257019169139415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395cbd1d40b572ab%3A0x5e4c79e69f3806a3!2sAroma%20City%20Center!5e0!3m2!1sen!2sin!4v1718417962423!5m2!1sen!2sin"
               width="100%"
               height="100%"
-               className="absolute inset-0"
-               style={{ border: 0 }}
-              allowfullscreen=""
+              className="absolute inset-0"
+              style={{ border: 0 }}
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
               frameBorder="0"
               title="map"
-              marginheight="0"
-              marginwidth="0"
+              marginHeight="0"
+              marginWidth="0"
               scrolling="no"
             ></iframe>
             <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
