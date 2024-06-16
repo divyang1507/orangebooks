@@ -30,7 +30,7 @@ const page = ({ params }) => {
 
   return (
     <section className="text-gray-600 body-font overflow-hidden w-[90%] mx-auto">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 lg:py-24 py-12 mx-auto">
         <div className="lg:w-4/5 mx-auto flex itme-center justify-center flex-wrap">
           <div className="flex flex-col-reverse lg:flex-row gap-5">
             <div className="flex lg:flex-col md:flex justify-between items-center">
