@@ -41,7 +41,7 @@ const HeroSection = () => {
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <Image
               className="scale-x-[-1]"
-              src="/Kids reading (1).gif"
+              src="/KidsReading.gif"
               width={1000}
               height={1000}
               alt="OrangeBookHeroImage"
