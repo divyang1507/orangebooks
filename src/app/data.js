@@ -7,7 +7,7 @@ export const bookdata = [
     rating: 4.5,
     review: 1526,
     price: 120,
-    image: ["/Barkadi.jpg", "/Desihisab.jpg", "/ABCD.jpg"],
+    image: ["/Barkadi/Barkadi.jpg","/Barkadi/Barkadi (1).jpg","/Barkadi/Barkadi (2).jpg","/Barkadi/Barkadi (7).jpg", ],
     slug: "Gujarati-and-English-Letter-writing",
   },
   {
@@ -29,7 +29,18 @@ export const bookdata = [
     rating: 4.5,
     review: 1526,
     price: 120,
-    image: ["/ABCD.jpg", "/Barkadi.jpg", "/Desihisab.jpg", ],
+    image: ["/EnglishLetter/EnglishLetter (1).jpg", "/EnglishLetter/EnglishLetter (2).jpg", "/EnglishLetter/EnglishLetter (3).jpg","/EnglishLetter/EnglishLetter (10).jpg", ],
     slug: "Letter-Tracing-and-Hand-Writing-Practice",
+  },
+  {
+    id: 4,
+    bookname: "1 to 50 Ankgyan",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque earum animi vitae voluptatibus quia ullam, natus excepturi reiciendis et fugit recusandae perferendis esse quos exercitationem.",
+    rating: 4.5,
+    review: 1526,
+    price: 120,
+    image: ["/Maths/Maths (1).jpg","/Maths/Maths (4).jpg","/Maths/Maths (9).jpg","/Maths/Maths (8).jpg", ],
+    slug: "ankgyan",
   },
 ];

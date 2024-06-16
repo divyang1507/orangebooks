@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -46,7 +47,6 @@ const HeroSection = () => {
               height={1000}
               alt="OrangeBookHeroImage"
             />
-            
           </div>
         </div>
       </section>
