@@ -23,8 +23,8 @@ const HeroSection = () => {
               <div className="flex gap-3 items-center border-2 border-orange-500 p-1 pr-6 rounded-lg ">
                 <Image
                   src="/BestSellerBadge.png"
-                  height={41}
-                  width={96}
+                  height={87*0.75}
+                  width={149*0.75}
                   alt="badge"
                 />
                 <div className="font-semibold text-center">
