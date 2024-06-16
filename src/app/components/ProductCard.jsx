@@ -17,19 +17,14 @@ const ProductCard = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 justify-center items-center place-items-center -m-4">
             {/* <div className="flex flex-wrap md:flex-col lg:flex-row -m-4 lg:justify-between items-center"> */}
             {data.map((e) => (
-             <div key={e.id} className="p-4 m-2 flex w-[320px]">
+             <div key={e.id} className="p-4 m-2 flex w-[320px] hover:scale-105">
              <Link href={`/products/${e.slug}`}>
                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  {/* <img
-                    className="lg:h-48 md:h-36 w-full object-cover object-center"
-                    src="https://dummyimage.com/720x400"
-                    alt="blog"
-                  /> */}
                   <div className="flex items-center justify-center p-4 pb-0 rounded-lg overflow-hidden">
                     {e.image ? (
                       <Image
                         className="rounded-lg"
-                        src={e.image}
+                        src={e.image[0]}
                         height={439}
                         width={320}
                         alt={e.bookname}

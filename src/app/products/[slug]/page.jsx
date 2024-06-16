@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+
 import { bookdata } from "../../data.js";
 import { FaRegStar, FaArrowRight } from "react-icons/fa6";
 import Image from "next/image.js";
@@ -22,44 +24,35 @@ const page = ({ params }) => {
       return book;
     }, {});
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [activeImage, setActiveImage] = useState(book.image[0]);
+
   return (
     <section className="text-gray-600 body-font overflow-hidden w-[90%] mx-auto">
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex itme-center justify-center flex-wrap">
-          <div className="flex gap-5">
-            <div className="flex flex-col justify-between items-center">
-              <div>
+          <div className="flex flex-col-reverse lg:flex-row gap-5">
+            <div className="flex lg:flex-col md:flex justify-between items-center">
+              {book.image.map((image, index) => (
                 <Image
-                  className="rounded"
-                  src={book.image}
-                  height={100}
+                  key={index}
+                  src={image}
                   width={80}
-                  alt={book.name}
-                />
-              </div>
-              <div>
-                <Image
-                  className="rounded"
-                  src={book.image}
                   height={100}
-                  width={80}
-                  alt={book.name}
+                  alt={`Thumbnail ${index + 1}`}
+                  className={`thumbnail ${
+                    activeImage === image
+                      ? "active border-2 border-solid border-black"
+                      : "opacity-70"
+                  } rounded-sm hover:cursor-pointer`}
+                  onClick={() => setActiveImage(image)}
                 />
-              </div>
-              <div>
-                <Image
-                  className="rounded"
-                  src={book.image}
-                  height={100}
-                  width={80}
-                  alt={book.name}
-                />
-              </div>
+              ))}
             </div>
             <div>
               <Image
                 className="rounded-lg"
-                src={book.image}
+                src={activeImage}
                 height={439}
                 width={320}
                 alt={book.name}
@@ -71,7 +64,7 @@ const page = ({ params }) => {
               Book
             </h2>
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-              {book.bookname}
+              {book.name}
             </h1>
             <div className="flex mb-4">
               <span className="flex items-center justify-center">

@@ -7,7 +7,7 @@ const HeroSection = () => {
       <section className="text-gray-600 body-font">
         <div className="container mx-auto lg:flex-row px-5 py-5 pt-8 flex flex-col-reverse items-center w-[90%]">
           <div className="lg:flex-grow md:w-[90%] md:justify-center lg:items-start lg:pr-24 md:pr-0 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-5xl text-3xl mb-4 font-medium text-gray-900">
+            <h1 className="title-font sm:text-5xl text-3xl mb-4 font-extrabold text-gray-900">
               Nurturing Curious Minds,
               <br /> One Page at a Time
             </h1>

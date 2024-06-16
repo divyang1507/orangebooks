@@ -7,9 +7,8 @@ export const bookdata = [
     rating: 4.5,
     review: 1526,
     price: 120,
-    image:'/Barkadi.jpg',
-    slug: "Gujarati-and-English-Letter-writing"
-    
+    image: ["/Barkadi.jpg", "/Desihisab.jpg", "/ABCD.jpg"],
+    slug: "Gujarati-and-English-Letter-writing",
   },
   {
     id: 1,
@@ -19,8 +18,8 @@ export const bookdata = [
     rating: 4.5,
     review: 1526,
     price: 120,
-      image:'/Desihisab.jpg',
-      slug: "King-Kong-The-Master-Desi-Hisab"
+    image: ["/Desihisab.jpg", "/Barkadi.jpg",  "/ABCD.jpg"],
+    slug: "King-Kong-The-Master-Desi-Hisab",
   },
   {
     id: 3,
@@ -30,8 +29,7 @@ export const bookdata = [
     rating: 4.5,
     review: 1526,
     price: 120,
-      image:'/ABCD.jpg',
-      slug: "Letter-Tracing-and-Hand-Writing-Practice"
+    image: ["/ABCD.jpg", "/Barkadi.jpg", "/Desihisab.jpg", ],
+    slug: "Letter-Tracing-and-Hand-Writing-Practice",
   },
 ];
-

@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [active, setactive] = useState(false);
@@ -12,7 +14,10 @@ const Navbar = () => {
   return (
     <header className="text-black body-font relative w-[90%] mx-auto">
       <div className="container mx-auto flex  mt-5 bg-orange-200 rounded-full flex-wrap p-5 items-center justify-between">
-        <a className="flex title-font font-medium items-center text-black  hover:cursor-pointer">
+        <Link
+          href="/"
+          className="flex title-font font-medium items-center text-black  hover:cursor-pointer"
+        >
           <Image
             src="/LogoImage.png"
             width={56}
@@ -22,20 +27,32 @@ const Navbar = () => {
           <span className="ml-3 text-xl font-semibold">
             Orange Book <br /> Publication
           </span>
-        </a>
-        <nav className="md:ml-auto md:hidden hidden lg:flex lg:flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer">
+        </Link>
+        <nav className="md:ml-auto md:hidden hidden lg:flex lg:flex-wrap font-semibold items-center text-base justify-center">
+          <Link
+            href="/"
+            className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer"
+          >
             Home
-          </a>
-          <a className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer">
+          </Link>
+          <Link
+            href="/products"
+            className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer"
+          >
             Products
-          </a>
-          <a className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer">
+          </Link>
+          <Link
+            href="/contact"
+            className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer"
+          >
             Contact
-          </a>
-          <a className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer">
+          </Link>
+          <Link
+            href="/about"
+            className="mr-5 hover:text-black hover:drop-shadow hover:cursor-pointer"
+          >
             About
-          </a>
+          </Link>
         </nav>
         <div className="pr-4">
           <button
@@ -46,18 +63,39 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <nav
+      <motion.nav
+        initial={false}
+        animate={{ opacity: active ? 1 : 0, x: active ? 0 : "-100%" }}
+        transition={{ duration: 0.3 }}
         className={`md:ml-auto absolute z-10 w-full p-4 rounded-3xl lg:hidden flex-col items-center text-base justify-center gap-5 bg-orange-200 mx-auto mt-4 ${
           active ? "flex" : "hidden"
         }`}
       >
-        <a className="mr-5 hover:text-gray-600 hover:cursor-pointer">Home</a>
-        <a className="mr-5 hover:text-gray-600 hover:cursor-pointer">
+        <Link
+          href="/"
+          className="mr-5 hover:text-gray-600 hover:cursor-pointer"
+        >
+          Home
+        </Link>
+        <Link
+          href="/products"
+          className="mr-5 hover:text-gray-600 hover:cursor-pointer"
+        >
           Products
-        </a>
-        <a className="mr-5 hover:text-gray-600 hover:cursor-pointer">Contact</a>
-        <a className="mr-5 hover:text-gray-600 hover:cursor-pointer">About</a>
-      </nav>
+        </Link>
+        <Link
+          href="/contact"
+          className="mr-5 hover:text-gray-600 hover:cursor-pointer"
+        >
+          Contact
+        </Link>
+        <Link
+          href="/about"
+          className="mr-5 hover:text-gray-600 hover:cursor-pointer"
+        >
+          About
+        </Link>
+      </motion.nav>
     </header>
   );
 };
