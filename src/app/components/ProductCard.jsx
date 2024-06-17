@@ -1,11 +1,9 @@
 import React from "react";
 import { bookdata } from "../data.js";
-import Image from "next/image.js";
-import { FaRegStar, FaArrowRight } from "react-icons/fa6";
 import Link from "next/link.js";
+import BookCard from "./BookCard.jsx";
 
 const ProductCard = () => {
-  // console.log(bookdata);
   const data = bookdata;
   return (
     <>
@@ -14,62 +12,77 @@ const ProductCard = () => {
           <div className="text-center text-orange-500 text-4xl font-bold mb-6">
             Our Products
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 justify-center items-center place-items-center -m-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 lg:auto-cols-auto grid-cols-1 justify-center items-start place-items-center -m-4">
             {/* <div className="flex flex-wrap md:flex-col lg:flex-row -m-4 lg:justify-between items-center"> */}
             {data.map((e) => (
-              <div
+              <div key={e.id}>
+                <Link href={`/products/${e.slug}`}>
+                  <BookCard
+                    bookname={e.bookname}
+                    price={e.price}
+                    rating={e.rating}
+                    review={e.review}
+                    image={e.image}
+                    description={e.description}
+                    id={e.id}
+                  />
+                </Link>
+                {/* <motion.div
                 key={e.id}
-                className="p-4 m-2 flex w-[320px] transform transition duration-500 hover:scale-105"
+                className="p-4 m-2 flex lg:min-w-[340x] transform transition duration-500 hover:scale-105"
               >
                 <Link href={`/products/${e.slug}`}>
-                  <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                    <div className="flex items-center justify-center p-4 pb-0 rounded-lg overflow-hidden">
+                  <div className="h-full border-2 border-gray-200 border-opacity-60 flex flex-col rounded-lg">
+                    <div className="flex items-center justify-center rounded-lg relative">
                       {e.image ? (
                         <Image
-                          className="rounded-lg"
+                          className="object-cover relative rounded-lg w-80 h-96"
                           src={e.image[0]}
-                          height={439}
-                          width={320}
+                          width={1240}
+                          height={1754}
+                          layout="responsive"
                           alt={e.bookname}
                         />
                       ) : (
                         <Image
                           src="/Heroimg.png"
-                          height={740}
-                          width={540}
+                          height={840}
+                          width={640}
                           alt={e.bookname}
                         />
                       )}
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 flex-col justify-between">
                       <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                         Book
                       </h2>
-                      <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                      <h1 className="title-font text-lg font-medium text-gray-900 mb-3 line-clamp-2">
                         {e.bookname}
                       </h1>
                       <p className="leading-relaxed mb-3 line-clamp-2">
                         {e.description}
                       </p>
-                      <div className="flex items-center flex-wrap ">
-                        <div className="text-indigo-500 inline-flex gap-2 justify-center items-center md:mb-2 lg:mb-0">
-                          Learn More
+
+                      <div className="flex justify-between items-center ">
+                        <div className="flex items-center text-indigo-500 gap-2 md:mb-2 lg:mb-0">
+                          <div>Learn More</div>
                           <FaArrowRight />
                         </div>
-                        <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200 justify-center">
-                          <span className="text-lg text-orange-500">
-                            {" "}
-                            <FaRegStar />
-                          </span>
-                          <span> {e.rating}</span>
-                        </span>
-                        <span className="text-gray-400 inline-flex items-center leading-none text-sm">
-                          {e.reviews}
-                        </span>
+
+                        <div className="flex justify-center items-center gap-1">
+                          <FaRegStar className="text-lg text-orange-500" />
+                          <div className="text-center inline-block align-baseline">
+                            {e.rating}
+                          </div>
+                          <div className="text-gray-400 inline-block align-baseline">
+                            ({e.review})
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </Link>
+              </motion.div> */}
               </div>
             ))}
           </div>

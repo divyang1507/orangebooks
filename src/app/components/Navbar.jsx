@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa6";
 import { motion } from "framer-motion";
-
+import { MdClose } from "react-icons/md";
 const Navbar = () => {
   const [active, setactive] = useState(false);
   const menu = () => {
@@ -55,12 +55,22 @@ const Navbar = () => {
           </Link>
         </nav>
         <div className="pr-4">
-          <button
+          <motion.button
             className="flex items-center justify-center text-3xl lg:hidden"
             onClick={menu}
           >
-            <FaBars />
-          </button>
+            {!active ? (
+              <motion.div
+              initial={false}
+              animate={{ rotate: !active ? 360 : 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <FaBars />
+              </motion.div>
+            ) : (
+              <MdClose />
+            )}
+          </motion.button>
         </div>
       </div>
       <motion.nav
@@ -89,12 +99,12 @@ const Navbar = () => {
         >
           Contact
         </Link>
-        <Link
+        {/* <Link
           href="/about"
           className="mr-5 hover:text-gray-600 hover:cursor-pointer"
         >
           About
-        </Link>
+        </Link> */}
       </motion.nav>
     </header>
   );

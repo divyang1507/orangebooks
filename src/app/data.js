@@ -36,7 +36,7 @@ export const bookdata = [
       "(10) Explanation of each point by example",
     ],
     rating: 4.5,
-    review: 1526,
+    review: 2985,
     price: 120,
     image: ["/Desihisab.jpg", "/Barkadi.jpg", "/ABCD.jpg"],
     slug: "King-Kong-The-Master-Desi-Hisab",
@@ -53,7 +53,7 @@ export const bookdata = [
       "(6) Understand Letter Tracing through the Video",
     ],
     rating: 4.5,
-    review: 1526,
+    review: 1687,
     price: 120,
     image: [
       "/EnglishLetter/EnglishLetter (1).jpg",
@@ -65,7 +65,7 @@ export const bookdata = [
   },
   {
     id: 4,
-    bookname: "1 to 50 Ankgyan",
+    bookname: "1 to 50 Ankgyan in Gujarati and English",
     description: [
       "Study of kneading on different shapes",
       "Study of Gujarati-English numerals",
@@ -74,7 +74,7 @@ export const bookdata = [
       "Explanation of numbers through video",
     ],
     rating: 4.5,
-    review: 1526,
+    review: 1259,
     price: 120,
     image: [
       "/Maths/Maths (1).jpg",

@@ -1,20 +1,32 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import { useRef } from 'react';
+
 
 const HeroSection = () => {
+
+
+
   return (
     <>
       <section className="text-gray-600 body-font">
-        <div className="container mx-auto lg:flex-row px-5 py-5 pt-8 flex flex-col-reverse items-center w-[90%]">
-          <div className="lg:flex-grow md:w-[90%] md:justify-center lg:items-start lg:pr-24 md:pr-0 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-5xl text-3xl mb-4 font-extrabold text-gray-900">
-              Nurturing Curious Minds,
-              <br /> One Page at a Time
-            </h1>
-            <p className="mb-8 text-lg leading-relaxed">
-              Welcome to Orange Book Publication Where Imagination Blossoms! We
-              are one-stop solution htmlFor your child. We provide best colorful
+        <motion.div
+          initial={{ opacity: 0 , y: 20}}
+          whileInView={{ opacity: 1 }}
+          className="container mx-auto lg:flex-row px-5 py-5 pt-8 flex flex-col-reverse items-center w-[90%]"
+        >
+          <div className=" md:w-[90%] md:justify-center lg:items-start lg:pr-24 md:pr-0 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center">
+            <div className="text-gray-900 text-2xl">Welcome to</div>
+            <div className="lg:text-5xl text-3xl mb-4 tracking-wider font-extrabold text-orange-500">
+              Orange Book Publication
+            </div>
+            <div className="lg:text-5xl text-3xl leading-4 font-semibold tracking-wider">
+              Learn Forever
+            </div>
+            <p className="mb-8 mt-8 text-lg leading-relaxed">
+              We are one-stop solution for your child. We provide best colorful
               books with pictures which helps chlidren to learn new things
               easily
             </p>
@@ -23,8 +35,8 @@ const HeroSection = () => {
               <div className="flex gap-3 items-center border-2 border-orange-500 p-1 pr-6 rounded-lg ">
                 <Image
                   src="/BestSellerBadge.png"
-                  height={87*0.75}
-                  width={149*0.75}
+                  height={87 * 0.75}
+                  width={149 * 0.75}
                   alt="badge"
                 />
                 <div className="font-semibold text-center">
@@ -43,12 +55,14 @@ const HeroSection = () => {
             <Image
               className="scale-x-[-1]"
               src="/KidsReading.gif"
-              width={1000}
-              height={1000}
+              width={800}
+              height={800}
+              layout="responsive"
               alt="OrangeBookHeroImage"
+              unoptimized
             />
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
