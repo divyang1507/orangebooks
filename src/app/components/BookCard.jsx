@@ -21,7 +21,7 @@ const BookCard = ({
         onHoverStart={(e) => {}}
         onHoverEnd={(e) => {}}
         key={id}
-        className="p-4 m-2 flex lg:min-w-[340x]"
+        className="p-4 m-2 flex h-full lg:min-w-[340x]"
       >
         <div className="h-full border-2 border-gray-200 border-opacity-60 flex flex-col rounded-lg">
           <div className="flex items-center justify-center rounded-lg relative">

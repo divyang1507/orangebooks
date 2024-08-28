@@ -7,7 +7,7 @@ const ProductCard = () => {
   const data = bookdata;
   return (
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600  body-font">
         <div className="container px-5 py-12 mx-auto w-[90%]">
           <div className="text-center text-orange-500 text-4xl font-bold mb-6">
             Our Products
