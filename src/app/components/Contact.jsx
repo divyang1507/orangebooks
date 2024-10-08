@@ -1,12 +1,36 @@
-'use client'
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
+const Contact = ({ secref }) => {
+  const publickey = process.env.PUBLIC_KEY;
+  const servicekey = process.env.SERVICE_KEY;
+  const tamplatekey = process.env.TAMPLATE_KEY;
+  const form = useRef();
 
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-const Contact = ({secref}) => {
+    emailjs
+      .sendForm(servicekey, tamplatekey, form.current, {
+        publicKey: publickey,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
+  };
+
   return (
     <>
-      <section className="text-gray-600 body-font relative w-[90%] mx-auto" secref={secref} >
+      <section
+        className="text-gray-600 body-font relative w-[90%] mx-auto"
+        secref={secref}
+      >
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
             <iframe
@@ -56,50 +80,63 @@ const Contact = ({secref}) => {
               Have any query regarding Our Books ? Keep in touch with Contacting
               us
             </p>
-            <div className="relative mb-4">
-              <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-            <div className="relative mb-4">
-              <label
-                htmlFor="email"
-                className="leading-7 text-sm text-gray-600"
+            <form
+              className="bg-white flex flex-col"
+              ref={form}
+              onSubmit={sendEmail}
+            >
+              <div className="relative mb-4">
+                <label
+                  htmlFor="name"
+                  className="leading-7 text-sm text-gray-600"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  required
+                  className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+              <div className="relative mb-4">
+                <label
+                  htmlFor="email"
+                  className="leading-7 text-sm text-gray-600"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="user_email"
+                  required
+                  className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+              <div className="relative mb-4">
+                <label
+                  htmlFor="message"
+                  className="leading-7 text-sm text-gray-600"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="user_message"
+                  required
+                  className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                ></textarea>
+              </div>
+              <button
+                onClick={sendEmail}
+                value="Send"
+                className="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg"
               >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-            <div className="relative mb-4">
-              <label
-                htmlFor="message"
-                className="leading-7 text-sm text-gray-600"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                className="w-full bg-white rounded border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              ></textarea>
-            </div>
-            <button className="text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded text-lg">
-              Contact Now
-            </button>
+                Contact Now
+              </button>
+            </form>
           </div>
         </div>
       </section>
