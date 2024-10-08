@@ -3,9 +3,9 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = ({ secref }) => {
-  const publickey = process.env.PUBLIC_KEY;
-  const servicekey = process.env.SERVICE_KEY;
-  const tamplatekey = process.env.TAMPLATE_KEY;
+  const publickey = process.env.REACT_APP_PUBLIC_KEY;
+  const servicekey = process.env.REACT_APP_SERVICE_KEY;
+  const tamplatekey = process.env.REACT_APP_TAMPLATE_KEY;
   const form = useRef();
 
   const sendEmail = (e) => {
