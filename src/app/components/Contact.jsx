@@ -5,9 +5,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = ({ secref }) => {
-  const publickey = process.env.REACT_APP_PUBLIC_KEY;
-  const servicekey = process.env.REACT_APP_SERVICE_KEY;
-  const tamplatekey = process.env.REACT_APP_TAMPLATE_KEY;
+  const publickey = process.env.REACT_APP_PUBLIC;
+  const servicekey = process.env.REACT_APP_SERVICE;
+  const tamplatekey = process.env.REACT_APP_TAMPLATE;
   const form = useRef();
 
   const sendEmail = (e) => {
