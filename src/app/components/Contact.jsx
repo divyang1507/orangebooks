@@ -1,6 +1,8 @@
 "use client";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = ({ secref }) => {
   const publickey = process.env.REACT_APP_PUBLIC_KEY;
@@ -18,15 +20,18 @@ const Contact = ({ secref }) => {
       .then(
         () => {
           console.log("SUCCESS!");
+          toast.success("Message is Sent")
         },
         (error) => {
           console.log("FAILED...", error.text);
+          toast.error("Something is Wrong")
         },
       );
   };
 
   return (
     <>
+     <ToastContainer />
       <section
         className="text-gray-600 body-font relative w-[90%] mx-auto"
         secref={secref}
