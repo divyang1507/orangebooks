@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { bookdata } from "../data.js";
 import Link from "next/link.js";
 import BookCard from "./BookCard.jsx";
 
 const ProductCard = () => {
+
   const data = bookdata;
   return (
     <>

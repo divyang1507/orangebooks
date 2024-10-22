@@ -57,7 +57,7 @@ const HeroSection = () => {
               src="/KidsReading.gif"
               width={800}
               height={800}
-              layout="responsive"
+              // layout="responsive"
               alt="OrangeBookHeroImage"
               unoptimized
             />

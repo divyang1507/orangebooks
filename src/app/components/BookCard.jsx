@@ -31,7 +31,7 @@ const BookCard = ({
                 src={image[0]}
                 width={1240}
                 height={1754}
-                layout="responsive"
+                // layout="responsive"
                 alt={bookname}
               />
             ) : (
